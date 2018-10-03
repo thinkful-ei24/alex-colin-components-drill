@@ -11,8 +11,9 @@ export default class App extends React.Component {
   }
 
 
-  handleGetValue() {
 
+  handleGetValue(value) {
+    this.setState({ value: this.state.value + value })
   }
 
   render() {
@@ -21,51 +22,71 @@ export default class App extends React.Component {
         <Output output={this.state.value} />
         <NumberButtons
           id="1"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="2"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="3"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="4"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="5"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="6"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="7"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="8"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="9"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="0"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
         />
         <NumberButtons
           id="+"
-          onClick={id => this.setState({ value: id })}
+          onClick={(value) => this.handleGetValue(value)}
+        />
+        <NumberButtons
+          id="-"
+          onClick={(value) => this.handleGetValue(value)}
+        />
+        <NumberButtons
+          id="*"
+          onClick={(value) => this.handleGetValue(value)}
+        />
+        <NumberButtons
+          id="/"
+          onClick={(value) => this.handleGetValue(value)}
+        />
+        <NumberButtons
+          id="."
+          onClick={(value) => this.handleGetValue(value)}
+        />
+        <NumberButtons
+          id="="
+          onClick={id => this.setState({ value: eval(this.state.value) })}
         />
         <NumberButtons
           id="C"
-          onClick={id => this.setState({ value: id })}
+          onClick={id => this.setState({value: ''})}
         />
       </div>
     );
