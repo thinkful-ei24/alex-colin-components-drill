@@ -12,7 +12,13 @@ export default class App extends React.Component {
     };
   }
 
-
+  handleCalculateOutput(value) {
+    try {
+      this.setState({ value: eval(this.state.value)})
+      } catch (e) {
+        this.setState({value: 'ERROR ... LEARN HOW TO MATH'})
+      }
+  }
 
   handleGetValue(value) {
     this.setState({ value: this.state.value + value })
@@ -84,7 +90,7 @@ export default class App extends React.Component {
           <NumberButtons
             value="="
             id="equals"
-            onClick={value => this.setState({ value: eval(this.state.value) })}
+            onClick={value => this.handleCalculateOutput(value)}
           />
           <NumberButtons
             value="0"
