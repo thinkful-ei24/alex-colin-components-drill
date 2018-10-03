@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2px;
+}
+
+#clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#equals {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
