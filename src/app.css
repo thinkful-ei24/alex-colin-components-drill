@@ -1,7 +1,10 @@
 .calculator-board {
-  width: 280px;
-  margin: 50px auto;
-  padding: 18px 12px;
-  border-radius: 5px;
-  background-color: yellow;
+    width: 280px;
+    margin: 50px auto;
+    padding: 18px 12px;
+    background-color: yellow;
+    border: 2px solid grey;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 5px;
 }
