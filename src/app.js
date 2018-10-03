@@ -1,6 +1,7 @@
 import React from 'react';
 import NumberButtons from './buttons/numbers.js';
 import Output from './output';
+import './app.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="calculator-board">
         <Output output={this.state.value} />
         <NumberButtons
           id="1"
